@@ -1,0 +1,36 @@
+{
+  "username": "your-username",
+  "name": "Your Name",
+  "bio": "A short description about yourself",
+  "avatar": "/avatars/your-avatar.png",
+  "location": "Your Location",
+  "verified": false,
+  "theme": "midnight",
+  "layout": "classic",
+  "socials": {
+    "github": "https://github.com/yourusername",
+    "x": "https://x.com/yourusername",
+    "linkedin": "https://linkedin.com/in/yourusername"
+  },
+  "links": [
+    {
+      "title": "Featured",
+      "description": "About my journey and projects",
+      "url": "https://blog.example.com",
+      "icon": "rocket",
+      "featured": true
+    },
+    {
+      "title": "My Website",
+      "description": "Visit my personal website",
+      "url": "https://example.com",
+      "icon": "globe"
+    },
+    {
+      "title": "GitHub",
+      "description": "Check out my projects",
+      "url": "https://github.com/yourusername",
+      "icon": "github"
+    }
+  ]
+}

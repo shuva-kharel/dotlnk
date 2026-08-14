@@ -1,0 +1,268 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --lf-bg: #080b14;
+  --lf-bg-alt: #0d1220;
+  --lf-text: #c7d0e0;
+  --lf-text-muted: #6b7491;
+  --lf-text-heading: #f0f4ff;
+  --lf-accent: #4b8dff;
+  --lf-accent-soft: rgba(75,141,255,0.12);
+  --lf-card: rgba(20,27,45,0.6);
+  --lf-card-hover: rgba(28,37,61,0.8);
+  --lf-border: rgba(75,141,255,0.15);
+  --lf-radius: 20px;
+  --lf-card-border: 1px solid var(--lf-border);
+  --lf-card-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  --lf-card-padding: 20px 24px;
+  --lf-card-blur: 14px;
+  --lf-hover-scale: 1.02;
+  --lf-hover-y: -2px;
+  --lf-transition: all 0.3s cubic-bezier(0.16,1,0.3,1);
+  --lf-font-heading: "Space Grotesk", sans-serif;
+  --lf-font-body: "Inter", sans-serif;
+  --lf-font-mono: "JetBrains Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--lf-bg);
+  color: var(--lf-text);
+  font-family: var(--lf-font-body);
+  transition: background 0.5s ease, color 0.4s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background: var(--lf-accent);
+  color: var(--lf-bg);
+}
+
+@keyframes lf-fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes lf-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes lf-scale-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes lf-aurora {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(30px, -20px) rotate(3deg); }
+  66% { transform: translate(-20px, 20px) rotate(-2deg); }
+}
+
+@keyframes lf-gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes lf-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes lf-matrix-fall {
+  0% { transform: translateY(-100%); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+@keyframes lf-scanline-move {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+@keyframes lf-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.lf-anim-fade-up {
+  animation: lf-fade-up 0.6s cubic-bezier(0.16,1,0.3,1) both;
+}
+
+.lf-anim-fade-in {
+  animation: lf-fade-in 0.5s ease both;
+}
+
+.lf-skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--lf-card) 0%,
+    var(--lf-card-hover) 50%,
+    var(--lf-card) 100%
+  );
+  background-size: 200% 100%;
+  animation: lf-shimmer 1.5s infinite linear;
+}
+
+.lf-card {
+  background: var(--lf-card);
+  border: var(--lf-card-border);
+  border-radius: var(--lf-radius);
+  box-shadow: var(--lf-card-shadow);
+  backdrop-filter: blur(var(--lf-card-blur));
+  -webkit-backdrop-filter: blur(var(--lf-card-blur));
+  transition: var(--lf-transition);
+}
+
+.lf-link-card {
+  background: var(--lf-card);
+  border: var(--lf-card-border);
+  border-radius: var(--lf-radius);
+  box-shadow: var(--lf-card-shadow);
+  backdrop-filter: blur(var(--lf-card-blur));
+  -webkit-backdrop-filter: blur(var(--lf-card-blur));
+  transition: var(--lf-transition);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: var(--lf-card-padding);
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+
+.lf-link-card:hover {
+  background: var(--lf-card-hover);
+  transform: translateY(var(--lf-hover-y)) scale(var(--lf-hover-scale));
+  border-color: var(--lf-accent);
+}
+
+.lf-link-card:active {
+  transform: translateY(0) scale(0.99);
+}
+
+.lf-bg-aurora::before {
+  content: "";
+  position: fixed;
+  inset: -50%;
+  background: var(--lf-bg-layers, transparent);
+  animation: lf-aurora var(--lf-bg-speed, 18s) ease-in-out infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.lf-bg-animated-gradient {
+  background: var(--lf-bg-layers, var(--lf-bg));
+  background-size: 300% 300%;
+  animation: lf-gradient-shift var(--lf-bg-speed, 22s) ease infinite;
+}
+
+.lf-bg-grid::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: var(--lf-bg-layers);
+  background-size: 40px 40px;
+  z-index: 0;
+  pointer-events: none;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 30%, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 30%, black 30%, transparent 80%);
+}
+
+.lf-bg-scanlines::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: var(--lf-bg-layers);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.lf-bg-glow::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: var(--lf-bg-glow, transparent), var(--lf-bg-layers, transparent);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.lf-bg-noise::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4' /%3C/svg%3E");
+  opacity: 0.03;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.lf-bg-matrix::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse 90% 60% at 50% 50%, rgba(0,255,65,0.04), transparent 70%);
+}
+
+.lf-matrix-rain {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.lf-matrix-col {
+  position: absolute;
+  top: 0;
+  color: var(--lf-accent);
+  font-family: var(--lf-font-mono);
+  font-size: 14px;
+  line-height: 1.2;
+  opacity: 0.7;
+  text-shadow: 0 0 6px var(--lf-accent);
+  animation: lf-matrix-fall linear infinite;
+}
+
+.lf-glow-text {
+  text-shadow: 0 0 20px var(--lf-accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .lf-bg-aurora::before,
+  .lf-bg-animated-gradient,
+  .lf-matrix-col {
+    animation: none !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--lf-border);
+  border-radius: 4px;
+}

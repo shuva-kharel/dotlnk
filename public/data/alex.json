@@ -1,0 +1,41 @@
+{
+  "username": "alex",
+  "name": "Alex Rivera",
+  "bio": "Photographer • Visual storyteller",
+  "avatar": "https://images.pexels.com/photos/6287505/pexels-photo-6287505.jpeg?auto=compress&cs=tinysrgb&h=300&w=300",
+  "location": "Lisbon, Portugal",
+  "verified": true,
+  "theme": "minimal",
+  "layout": "cards",
+  "socials": {
+    "instagram": "https://instagram.com/alexrivera",
+    "website": "https://alexrivera.photo"
+  },
+  "links": [
+    {
+      "title": "Portfolio",
+      "description": "Selected works 2019—2025",
+      "url": "https://alexrivera.photo",
+      "icon": "camera",
+      "featured": true
+    },
+    {
+      "title": "Print Shop",
+      "description": "Limited edition prints available",
+      "url": "https://alexrivera.photo/prints",
+      "icon": "shopping-bag"
+    },
+    {
+      "title": "Instagram",
+      "description": "Daily frames & behind the scenes",
+      "url": "https://instagram.com/alexrivera",
+      "icon": "instagram"
+    },
+    {
+      "title": "Workshops",
+      "description": "Street photography masterclasses",
+      "url": "https://alexrivera.photo/workshops",
+      "icon": "award"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "username": "shuva",
+  "name": "Shuva",
+  "bio": "Cybersecurity • Linux • Programming",
+  "avatar": "https://ca.slack-edge.com/E09V59WQY1E-U084RU0TKUM-be8ca7ca641e-512",
+  "location": "Kathmandu, Nepal",
+  "verified": true,
+  "theme": "glass",
+  "layout": "compact",
+  "socials": {
+    "website": "https://shuvakharel.com.np",
+    "instagram": "https://instagram.com/shuva_kharel"
+  },
+  "links": [
+    {
+      "title": "GitHub",
+      "description": "Open source projects & tools",
+      "url": "https://github.com/shuva-kharel",
+      "icon": "github"
+    },
+    {
+      "title": "LinkedIn",
+      "description": "My professional profile",
+      "url": "https://linkedin.com/in/shuva-kharel",
+      "icon": "linkedin"
+    },
+    {
+      "title": "Medium",
+      "description": "Technical articles and tutorials",
+      "url": "https://medium.com/@shuva-kharel",
+      "icon": "medium"
+    },
+    {
+      "title": "TryHackMe",
+      "description": "My TryHackMe profile",
+      "url": "https://tryhackme.com/p/shuva",
+      "icon": "tryhackme"
+    }
+  ]
+}

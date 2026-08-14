@@ -1,0 +1,48 @@
+{
+  "username": "maya",
+  "name": "Maya Chen",
+  "bio": "Digital artist • Color is my language",
+  "avatar": "https://images.pexels.com/photos/2992517/pexels-photo-2992517.jpeg?auto=compress&cs=tinysrgb&h=300&w=300",
+  "location": "Berlin, Germany",
+  "verified": true,
+  "theme": "sunset",
+  "layout": "classic",
+  "socials": {
+    "instagram": "https://instagram.com/maya.draws",
+    "dribbble": "https://dribbble.com/mayachen",
+    "website": "https://maya.art"
+  },
+  "links": [
+    {
+      "title": "Latest Collection: Warm Bodies",
+      "description": "A series about light, skin, and golden hour",
+      "url": "https://maya.art/warm-bodies",
+      "icon": "pen-tool",
+      "featured": true
+    },
+    {
+      "title": "Art Store",
+      "description": "Prints, stickers & original pieces",
+      "url": "https://maya.art/store",
+      "icon": "shopping-bag"
+    },
+    {
+      "title": "Dribbble",
+      "description": "Process shots & WIP experiments",
+      "url": "https://dribbble.com/mayachen",
+      "icon": "dribbble"
+    },
+    {
+      "title": "Instagram",
+      "description": "Daily art & sketches",
+      "url": "https://instagram.com/maya.draws",
+      "icon": "instagram"
+    },
+    {
+      "title": "Commissions",
+      "description": "Custom artwork — currently open",
+      "url": "https://maya.art/commissions",
+      "icon": "heart"
+    }
+  ]
+}

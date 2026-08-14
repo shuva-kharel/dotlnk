@@ -1,0 +1,42 @@
+{
+  "username": "dev",
+  "name": "Dev Patel",
+  "bio": "Software engineer • Building things that work",
+  "avatar": "https://images.pexels.com/photos/16764124/pexels-photo-16764124.jpeg?auto=compress&cs=tinysrgb&h=300&w=300",
+  "location": "Remote",
+  "verified": false,
+  "theme": "terminal",
+  "layout": "terminal",
+  "socials": {
+    "github": "https://github.com/devpatel",
+    "x": "https://x.com/devpatel",
+    "linkedin": "https://linkedin.com/in/devpatel"
+  },
+  "links": [
+    {
+      "title": "> whoami --verbose",
+      "description": "About me, my stack, and what I'm building",
+      "url": "https://devpatel.io/about",
+      "icon": "terminal",
+      "featured": true
+    },
+    {
+      "title": "> cat ~/projects",
+      "description": "Open source & side projects",
+      "url": "https://github.com/devpatel",
+      "icon": "code"
+    },
+    {
+      "title": "> git log --blog",
+      "description": "Tech blog — systems, Go, and dev tools",
+      "url": "https://devpatel.io/blog",
+      "icon": "book"
+    },
+    {
+      "title": "> contact --email",
+      "description": "Get in touch",
+      "url": "mailto:hello@devpatel.io",
+      "icon": "mail"
+    }
+  ]
+}
