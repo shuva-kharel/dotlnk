@@ -247,14 +247,12 @@ function Hero({
                 className="transition-transform group-hover:translate-x-1"
               />
             </button>
-            <a
-              href={GITHUB_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => navigate("/editor")}
               className="w-full rounded-xl px-6 py-3.5 text-sm font-semibold transition-all duration-300 hover:scale-105 sm:w-auto lf-card"
             >
               Build Your Own
-            </a>
+            </button>
           </div>
 
           <p
